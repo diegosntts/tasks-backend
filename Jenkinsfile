@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage ('Just test') {
             steps{
-                bat 'nvm clean package -DSkipTests=true'
+                bat 'mvn clean package -DSkipTests=true'
             }
         }
         // stage ('Unit tests') {
