@@ -6,11 +6,11 @@ pipeline{
                 bat 'nvm clean package -DSkipTests=true'
             }
         }
-        stage ('Unit tests') {
-            steps{
-                bat 'nvm clean package -DSkipTests=true'
-            }
-        }   
+        // stage ('Unit tests') {
+        //     steps{
+        //         bat 'nvm clean package -DSkipTests=true'
+        //     }
+        // }   
         stage ('Sonar scanner') {
             environment{
                 scannerHome = tool 'SONAR_SCANNER'
